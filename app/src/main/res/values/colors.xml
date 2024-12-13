@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Main Color Palette -->
+    <color name="light_grey">#F8FAFC</color>
+    <color name="bej">#E5E1DA</color>
+    <color name="light_blue">#D9EAFD</color>
+    <color name="light_blue_grey">#BCCCDC</color>
+    <color name="pastel_blue">#89A8B2</color>
+    <color name="grey">#9AA6B2</color>
+    <color name="dark_grey">#2A3335</color>
+
+
+
 </resources>

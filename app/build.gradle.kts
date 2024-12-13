@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.omerfarukasil.hw2"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.omerfarukasil.hw2"
@@ -32,6 +32,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
