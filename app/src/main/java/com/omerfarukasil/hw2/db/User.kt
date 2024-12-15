@@ -9,9 +9,5 @@ class User (
     @PrimaryKey(autoGenerate = true)
     var id : Int = 1,
     var name : String,
-    var gender : Char,
-    var headSize : String,
-    var topSize : String,
-    var pantSize : Int,
-    var shoeSize : Double
+    var gender : Char
 )

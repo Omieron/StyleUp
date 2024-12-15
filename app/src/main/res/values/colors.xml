@@ -10,7 +10,12 @@
     <color name="light_blue_grey">#BCCCDC</color>
     <color name="pastel_blue">#89A8B2</color>
     <color name="grey">#9AA6B2</color>
+    <color name="purple">#553C9E</color>
     <color name="dark_grey">#2A3335</color>
+
+    <!-- Warning Color Palette -->
+    <color name="pastel_red">#FF8383</color>
+    <color name="red">#FF4141</color>
 
 
 

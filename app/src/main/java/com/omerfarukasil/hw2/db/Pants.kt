@@ -7,6 +7,7 @@ import com.omerfarukasil.hw2.util.ConstantsDB
 class Pants (
     var id : Int,
     var name : String,
+    var gender : Char,
     var img : String,
     var stock : Int,
     var size : IntArray

@@ -9,5 +9,31 @@
     <string name="woman">Woman</string>
     <string name="motto">Create your own fashion</string>
 
+    <!-- Login Activity -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="back_btn">Back</string>
+    <string name="login_warning">Email or password is invalid!</string>
+
+    <!-- Register Activity-->
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="register_warning">This email is already exist!</string>
+
+    <!-- Shop Activity -->
+    <string name="clothes">Clothes</string>
+    <string name="pants">Pants</string>
+    <string name="hats">Hats</string>
+    <string name="shoes">Shoes</string>
+    <string name="user">User</string>
+    <string name="shoppingCard">Shopping Card</string>
+    <string name="purchase">Purchase</string>
+
+    <!-- Product Activity -->
+    <string name="product">Product Name</string>
+
+    <!-- Product Selected Item Layout -->
+    <string name="add">Add</string>
+    <string name="size">Size</string>
 
 </resources>
