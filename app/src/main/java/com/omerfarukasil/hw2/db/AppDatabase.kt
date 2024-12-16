@@ -1,24 +1,40 @@
 package com.omerfarukasil.hw2.db
 
+import android.content.Context
 import androidx.room.Database
+import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.omerfarukasil.hw2.db.dao.ClothesDao
-import com.omerfarukasil.hw2.db.dao.HatsDao
-import com.omerfarukasil.hw2.db.dao.PantsDao
-import com.omerfarukasil.hw2.db.dao.ShoesDao
 import com.omerfarukasil.hw2.db.dao.ShoppingCardDao
-import com.omerfarukasil.hw2.db.dao.UserCredentialDao
 import com.omerfarukasil.hw2.db.dao.UserDao
+import com.omerfarukasil.hw2.util.ConstantsDB
 
-@Database(entities = [User::class, UserCredential::class, ShoppingCard::class,
-                    Clothes::class, Pants::class, Shoes::class, Hats::class], version = 1)
+@Database(entities = [User::class, ShoppingCard::class, Clothes::class], version = 3)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun UserDao(): UserDao
-    abstract fun UserCredentialDao(): UserCredentialDao
     abstract fun ClothesDao(): ClothesDao
-    abstract fun HatsDao(): HatsDao
-    abstract fun ShoesDao(): ShoesDao
-    abstract fun PantsDao(): PantsDao
     abstract fun ShoppingCardDao(): ShoppingCardDao
 
+    companion object {
+        @Volatile
+        private var INSTANCE: AppDatabase?=null
+
+        fun getDatabase(context: Context):AppDatabase{
+            val tempInstance = INSTANCE
+            if(tempInstance != null) {
+                return tempInstance
+            }
+
+            synchronized(this){
+                val instance = Room.databaseBuilder(context.applicationContext,
+                    AppDatabase::class.java,
+                    ConstantsDB.DATABASENAME)
+                    //.fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
+                    .build()
+                INSTANCE = instance
+                return instance
+            }
+        }
+    }
 }

@@ -22,12 +22,12 @@
         app:layout_constraintTop_toBottomOf="@+id/recyclerView">
 
         <Button
-            android:id="@+id/purchaseBtn2"
+            android:id="@+id/purchaseBtn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_weight="0"
             android:backgroundTint="@color/dark_grey"
-            android:text="@string/login"
+            android:text="@string/purchase"
             android:textColor="@color/bej" />
 
         <Button
@@ -36,7 +36,7 @@
             android:layout_height="60dp"
             android:layout_weight="0"
             android:backgroundTint="@color/dark_grey"
-            android:text="@string/register"
+            android:text="@string/back_btn"
             android:textColor="@color/bej" />
     </LinearLayout>
 

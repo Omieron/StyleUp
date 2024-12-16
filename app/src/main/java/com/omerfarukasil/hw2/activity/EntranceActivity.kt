@@ -20,7 +20,13 @@ class EntranceActivity : AppCompatActivity() {
         binding = ActivityEntranceBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.womanLayout.setOnClickListener {
+            val intent = Intent(this@EntranceActivity, ShopActivity::class.java)
+            intent.putExtra("gender", "Woman")
+            intent.putExtra("userId", 0)
+
+            // Background life cycle
             binding.manLayout.isEnabled = false
             lifecycleScope.launch {
                 binding.womanLayout.setBackgroundResource(R.drawable.pressed_sex_layout)
@@ -28,9 +34,16 @@ class EntranceActivity : AppCompatActivity() {
                 binding.womanLayout.setBackgroundResource(0)
                 binding.manLayout.isEnabled = true
             }
+
+            startActivity(intent)
         }
 
         binding.manLayout.setOnClickListener {
+            val intent = Intent(this@EntranceActivity, ShopActivity::class.java)
+            intent.putExtra("gender", "Man")
+            intent.putExtra("userId", 0)
+
+            // Background life cycle
             binding.womanLayout.isEnabled = false
             lifecycleScope.launch {
                 binding.manLayout.setBackgroundResource(R.drawable.pressed_sex_layout)
@@ -38,6 +51,18 @@ class EntranceActivity : AppCompatActivity() {
                 binding.manLayout.setBackgroundResource(0)
                 binding.womanLayout.isEnabled = true
             }
+
+            startActivity(intent)
+        }
+
+        binding.loginBtn.setOnClickListener {
+            val intent = Intent(this@EntranceActivity, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.registerBtn.setOnClickListener {
+            val intent = Intent(this@EntranceActivity, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 }

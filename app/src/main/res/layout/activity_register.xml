@@ -43,6 +43,7 @@
         android:gravity="center"
         android:text="@string/register_warning"
         android:textColor="@color/bej"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/motto" />
@@ -115,23 +116,34 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <RadioButton
-                android:id="@+id/womanBtn"
-                android:layout_width="0dp"
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/woman" />
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/manBtn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/man" />
+                <RadioButton
+                    android:id="@+id/womanBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/woman" />
+
+                <RadioButton
+                    android:id="@+id/manBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/man" />
+
+            </RadioGroup>
 
         </TableRow>
+
     </TableLayout>
 
     <LinearLayout

@@ -21,6 +21,9 @@ interface ClothesDao {
     @Delete
     fun deleteClothes(clothes: Clothes): Int
 
+    @Query("SELECT * FROM ${ConstantsDB.CLOTHESTABLE} WHERE type = :type")
+    fun getClothesByType(type:String): List<Clothes>
+
     @Query("SELECT * FROM ${ConstantsDB.CLOTHESTABLE} WHERE id=:id")
     fun getClothes(id: Int): Clothes
 

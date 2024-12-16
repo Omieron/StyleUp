@@ -1,0 +1,594 @@
+
+
+For man Clothes
+
+[
+  {
+    "id": 1000,
+    "type": "clothes",
+    "name": "Clothes 1",
+    "gender": "Man",
+    "stock": 13,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=182jRLQiAoPs1tPjFBymcFqqL9jzlg0yr"
+  },
+  {
+    "id": 1001,
+    "type": "clothes",
+    "name": "Clothes 2",
+    "gender": "Man",
+    "stock": 4,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1djp3c08xrCoOngZ0EkoDJfMRfnuaP8HU"
+  },
+  {
+    "id": 1002,
+    "type": "clothes",
+    "name": "Clothes 3",
+    "gender": "Man",
+    "stock": 23,
+    "size": "S,M,L",
+    "img": "https://drive.google.com/uc?export=view&id=1u8TMBE5jut3_ouFkoi21nWPx98YHVcd1"
+  },
+  {
+    "id": 1003,
+    "type": "clothes",
+    "name": "Clothes 4",
+    "gender": "Man",
+    "stock": 45,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1Pirbrj0_xIDSCV7zsnngWjdFAMoFOt87"
+  },
+  {
+    "id": 1004,
+    "type": "clothes",
+    "name": "Clothes 5",
+    "gender": "Man",
+    "stock": 32,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1Pirbrj0_xIDSCV7zsnngWjdFAMoFOt87"
+  },
+  {
+    "id": 1005,
+    "type": "clothes",
+    "name": "Clothes 6",
+    "gender": "Man",
+    "stock": 65,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1W20tHBCs-NuWHkF_cJ_ue6LOkHBVHnLv"
+  },
+  {
+    "id": 1006,
+    "type": "clothes",
+    "name": "Clothes 7",
+    "gender": "Man",
+    "stock": 32,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1oTyc3wlmTz3gwMgTS_zeAvYxCbo21Iub"
+  },
+  {
+    "id": 1007,
+    "type": "clothes",
+    "name": "Clothes 8",
+    "gender": "Man",
+    "stock": 23,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1mh4nkprhBrdFUs7X9COjllx8ZZNlv3Tk"
+  },
+  {
+    "id": 1008,
+    "type": "clothes",
+    "name": "Clothes 9",
+    "gender": "Man",
+    "stock": 12,
+    "size": "S,M,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1_q_hg4S9xe80JkThpodbOfH4BFd9q5qX"
+  }
+]
+
+
+
+For Man Hat
+
+[
+  {
+    "id": 2000,
+    "type": "hat",
+    "name": "Hat 1",
+    "gender": "Man",
+    "stock": 13,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1N5wLz6ULMlX4vqX8V3ZcbHM1eKph76L4"
+  },
+  {
+    "id": 2001,
+    "type": "hat",
+    "name": "Hat 2",
+    "gender": "Man",
+    "stock": 4,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=12us8oWBOA1wtoWss1drHEW_Er53fpKi0"
+  },
+  {
+    "id": 2002,
+    "type": "hat",
+    "name": "Hat 3",
+    "gender": "Man",
+    "stock": 23,
+    "size": "S,M,L",
+    "img": "https://drive.google.com/uc?export=view&id=1_zuQhXOVPBWVpBwrN5wS-wFKbWiQxHYC"
+  },
+  {
+    "id": 2003,
+    "type": "hat",
+    "name": "Hat 4",
+    "gender": "Man",
+    "stock": 45,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1qwW3CAr2aywnh9PTSjsY6gxErbzM1fx-"
+  },
+  {
+    "id": 2004,
+    "type": "hat",
+    "name": "Hat 5",
+    "gender": "Man",
+    "stock": 32,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1bBH5d8SDkulNrdjYdBmseT-61le3L1f4"
+  },
+  {
+    "id": 2005,
+    "type": "hat",
+    "name": "Hat 6",
+    "gender": "Man",
+    "stock": 65,
+    "size": "S,M,L,XL,XLL",
+    "img": "https://drive.google.com/uc?export=view&id=1H58v6wruq-Y7yknhnGsk0hKGp80JfabJ"
+  }
+]
+
+
+For Man pants.
+
+
+[
+    {
+        "id": 3000,
+        "type": "pant",
+        "name": "Pant 1",
+        "gender": "Man",
+        "stock": 13,
+        "size": "32,34,36,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1bAPL29A-h_2GO8b260B3d6eIadXrGC7f"
+    },
+    {
+        "id": 3001,
+        "type": "pant",
+        "name": "Pant 2",
+        "gender": "Man",
+        "stock": 4,
+        "size": "32,34,36,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1Ly0yvcguQy1IK0dbmURS_9FLdGLcvPOb"
+    },
+    {
+        "id": 3002,
+        "type": "pant",
+        "name": "Pant 3",
+        "gender": "Man",
+        "stock": 23,
+        "size": "36,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1cm8zV2qmNLw0Em7GgjDik42trupz4qUU"
+    },
+    {
+        "id": 3003,
+        "type": "pant",
+        "name": "Pant 4",
+        "gender": "Man",
+        "stock": 45,
+        "size": "32,34,36,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1ZnExp6RisXOO3enxyNAH3aavR97fj_Xv"
+    },
+    {
+        "id": 3004,
+        "type": "pant",
+        "name": "Pant 5",
+        "gender": "Man",
+        "stock": 32,
+        "size": "32,34,36,38",
+        "img": "https://drive.google.com/uc?export=view&id=1RJsKcU_-vZ0zQ9Z1t_o1Wxjdh5wtYEk8"
+    },
+    {
+        "id": 3005,
+        "type": "pant",
+        "name": "Pant 6",
+        "gender": "Man",
+        "stock": 65,
+        "size": "32,34,36,38",
+        "img": "https://drive.google.com/uc?export=view&id=1CPKU_TLqrhzwlz01pawH_i8VBbtEpW87"
+    },
+    {
+        "id": 3006,
+        "type": "pant",
+        "name": "Pant 7",
+        "gender": "Man",
+        "stock": 11,
+        "size": "32,34,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1um7sFjtw-JdsvZRj6yDN_zsfIhrNF3iP"
+    },
+    {
+        "id": 3007,
+        "type": "pant",
+        "name": "Pant 8",
+        "gender": "Man",
+        "stock": 5,
+        "size": "32,34,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1rJCKyLkHDGXF0J73tw2IynXwdMXujRC4"
+    }
+]
+
+
+For Man shoes
+
+[
+    {
+        "id": 4000,
+        "type": "shoes",
+        "name": "Shoe 1",
+        "gender": "Man",
+        "stock": 13,
+        "size": "39,40,41,42,43,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1VokDJchu30Ltev_i8ZF4rh7px-si-5Fe"
+    },
+    {
+        "id": 4001,
+        "type": "shoes",
+        "name": "Shoe 2",
+        "gender": "Man",
+        "stock": 4,
+        "size": "39,40,41,42,43,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1E3IA6Yn492OlvNhsro4A6fwVFwJYfU29"
+    },
+    {
+        "id": 4002,
+        "type": "shoes",
+        "name": "Shoe 3",
+        "gender": "Man",
+        "stock": 23,
+        "size": "43,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1d1M23E9xLW8qDHSPYvaEFS8DUFbtuZi3"
+    },
+    {
+        "id": 4003,
+        "type": "shoes",
+        "name": "Shoe 4",
+        "gender": "Man",
+        "stock": 45,
+        "size": "39,42,43,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=11Hy_kPQHEq0KkZkg4nQdX2_GDhFB6qez"
+    },
+    {
+        "id": 4004,
+        "type": "shoes",
+        "name": "Shoe 5",
+        "gender": "Man",
+        "stock": 32,
+        "size": "39,40,41,42,43,44",
+        "img": "https://drive.google.com/uc?export=view&id=1h4neOe9P7zyawx9sDyw-NHdh6oDcdFtp"
+    },
+    {
+        "id": 4005,
+        "type": "shoes",
+        "name": "Shoe 6",
+        "gender": "Man",
+        "stock": 65,
+        "size": "39,40,41,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1geOWjA3TOUm6HKnuQhpXq1MI5gTCB-or"
+    }
+]
+
+
+****************************************************************************************************************************
+
+
+For woman Clothes
+
+[
+    {
+        "id": 1500,
+        "type": "clothes",
+        "name": "Clothes 1",
+        "gender": "Woman",
+        "stock": 13,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=19LRmAR_o4BQ_cGLcN36DRg8wGTBepEtp"
+    },
+    {
+        "id": 1501,
+        "type": "clothes",
+        "name": "Clothes 2",
+        "gender": "Woman",
+        "stock": 4,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1mdKeP18_iZgLu_AlIAyvbn75tcXdCOjb"
+    },
+    {
+        "id": 1502,
+        "type": "clothes",
+        "name": "Clothes 3",
+        "gender": "Woman",
+        "stock": 23,
+        "size": "S,M,L",
+        "img": "https://drive.google.com/uc?export=view&id=1w4wi_iQ9-fc26mkWOtTvR-4iyQadMQsY"
+    },
+    {
+        "id": 1503,
+        "type": "clothes",
+        "name": "Clothes 4",
+        "gender": "Woman",
+        "stock": 45,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1DpTL6-Q-kxWNGSflEkjhuxUWJYnCbAJp"
+    },
+    {
+        "id": 1504,
+        "type": "clothes",
+        "name": "Clothes 5",
+        "gender": "Woman",
+        "stock": 32,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=14z0aFWKg_fEGCsDnjoh_GM1B9g1p8GnI"
+    },
+    {
+        "id": 1505,
+        "type": "clothes",
+        "name": "Clothes 6",
+        "gender": "Woman",
+        "stock": 65,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1IpR4JfhCxE9uke4tPgNiCwBuHjBJM5y2"
+    },
+    {
+        "id": 1506,
+        "type": "clothes",
+        "name": "Clothes 7",
+        "gender": "Woman",
+        "stock": 32,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1fM5flsdlIKBgK_rnTgz2cFBacz8Jmfdk"
+    },
+    {
+        "id": 1507,
+        "type": "clothes",
+        "name": "Clothes 8",
+        "gender": "Woman",
+        "stock": 23,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=18V90-rOHAyJ5fmrduxRbHOJQ_PY7Zbkj"
+    }
+]
+
+
+
+For woman Hat
+[
+    {
+        "id": 2500,
+        "type": "hat",
+        "name": "Hat 1",
+        "gender": "Woman",
+        "stock": 13,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1c6kagpPOtvlqvPNX7hOqRpgMVXT-WUiC"
+    },
+    {
+        "id": 2501,
+        "type": "hat",
+        "name": "Hat 2",
+        "gender": "Woman",
+        "stock": 4,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1c6kagpPOtvlqvPNX7hOqRpgMVXT-WUiC"
+    },
+    {
+        "id": 2502,
+        "type": "hat",
+        "name": "Hat 3",
+        "gender": "Woman",
+        "stock": 23,
+        "size": "S,M,L",
+        "img": "https://drive.google.com/uc?export=view&id=1co682mMixdqjqcls5ljIcJDFYtzEOB0m"
+    },
+    {
+        "id": 2503,
+        "type": "hat",
+        "name": "Hat 4",
+        "gender": "Woman",
+        "stock": 45,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1lP7wkL_jfNLQFZbU-Zef3WpW5pgtFtUp"
+    },
+    {
+        "id": 2504,
+        "type": "hat",
+        "name": "Hat 5",
+        "gender": "Woman",
+        "stock": 32,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1lP7wkL_jfNLQFZbU-Zef3WpW5pgtFtUp"
+    },
+    {
+        "id": 2505,
+        "type": "hat",
+        "name": "Hat 6",
+        "gender": "Woman",
+        "stock": 65,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1Tf1EIN-Vu2koXpTEG0O8K64LythJrCT1"
+    },
+    {
+        "id": 2506,
+        "type": "hat",
+        "name": "Hat 7",
+        "gender": "Woman",
+        "stock": 15,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1zIOcVWwAUVFSQ25y-QZQVZMCKrVgBRQE"
+    },
+    {
+        "id": 2507,
+        "type": "hat",
+        "name": "Hat 8",
+        "gender": "Woman",
+        "stock": 45,
+        "size": "S,M,L,XL,XLL",
+        "img": "https://drive.google.com/uc?export=view&id=1DPniC9Mz-pzzmIJEOKNStvswk4pw1bo6"
+    }
+]
+
+
+For wamon pants.
+
+
+[
+    {
+        "id": 3500,
+        "type": "pant",
+        "name": "Pant 1",
+        "gender": "Woman",
+        "stock": 13,
+        "size": "32,34,36,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1JB7e8EXCFmo2YyEwr9lq3VqT9EPL1B7J"
+    },
+    {
+        "id": 3501,
+        "type": "pant",
+        "name": "Pant 2",
+        "gender": "Woman",
+        "stock": 4,
+        "size": "32,34,36,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1hMn3dfBemxZT4JPTebzCi04O2DiYQmQr"
+    },
+    {
+        "id": 3502,
+        "type": "pant",
+        "name": "Pant 3",
+        "gender": "Woman",
+        "stock": 23,
+        "size": "36,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1XaZttkTpNs_TU9IMZgCIR9O3lKip2lXO"
+    },
+    {
+        "id": 3503,
+        "type": "pant",
+        "name": "Pant 4",
+        "gender": "Woman",
+        "stock": 45,
+        "size": "32,34,36,38,40,42",
+        "img": "https://drive.google.com/uc?export=view&id=1EALHtKUqTWPRFE0v8aa1ONWbaR3Bzwwx"
+    },
+    {
+        "id": 3504,
+        "type": "pant",
+        "name": "Pant 5",
+        "gender": "Woman",
+        "stock": 32,
+        "size": "32,34,36,38",
+        "img": "https://drive.google.com/uc?export=view&id=1EALHtKUqTWPRFE0v8aa1ONWbaR3Bzwwx"
+    },
+    {
+        "id": 3505,
+        "type": "pant",
+        "name": "Pant 6",
+        "gender": "Woman",
+        "stock": 65,
+        "size": "32,34,36,38",
+        "img": "https://drive.google.com/uc?export=view&id=1NowGswWh-xRndOTVNAfOJXFIYMvMTsCf"
+    }
+]
+
+
+For woman shoes
+
+[
+    {
+        "id": 4500,
+        "type": "shoes",
+        "name": "Shoe 1",
+        "gender": "Woman",
+        "stock": 13,
+        "size": "39,40,41,42,43,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1ulRJYFsnecE7UQo5uoyGm-_863n3eqxn"
+    },
+    {
+        "id": 4501,
+        "type": "shoes",
+        "name": "Shoe 2",
+        "gender": "Woman",
+        "stock": 4,
+        "size": "39,40,41,42,43,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1VH5gwiJli9UfY8EQJFjFW6YJpSYItpp_"
+    },
+    {
+        "id": 4502,
+        "type": "shoes",
+        "name": "Shoe 3",
+        "gender": "Woman",
+        "stock": 23,
+        "size": "43,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=12zZgoa2TyrygAJcae8t3Qgo8rDHQoqUN"
+    },
+    {
+        "id": 4503,
+        "type": "shoes",
+        "name": "Shoe 4",
+        "gender": "Woman",
+        "stock": 45,
+        "size": "39,42,43,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=12zZgoa2TyrygAJcae8t3Qgo8rDHQoqUN"
+    },
+    {
+        "id": 4504,
+        "type": "shoes",
+        "name": "Shoe 5",
+        "gender": "Woman",
+        "stock": 32,
+        "size": "39,40,41,42,43,44",
+        "img": "https://drive.google.com/uc?export=view&id=1AdBbq2Xc4jhkyif1IcuaFSYWOXpYV83o"
+    },
+    {
+        "id": 4505,
+        "type": "shoes",
+        "name": "Shoe 6",
+        "gender": "Woman",
+        "stock": 65,
+        "size": "39,40,41,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1X7OBJ5JhDWiFGwZ30AmHzufqEl-gT50w"
+    },
+    {
+        "id": 4506,
+        "type": "shoes",
+        "name": "Shoe 7",
+        "gender": "Woman",
+        "stock": 65,
+        "size": "39,40,41,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1y8NUcWOzGH6VGeTVTG1GIfDuTqpzQL81"
+    },
+    {
+        "id": 4507,
+        "type": "shoes",
+        "name": "Shoe 8",
+        "gender": "Woman",
+        "stock": 35,
+        "size": "39,40,41,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=19YHVQhWl0KpT5b8fxJ2QM2-fY14u47Jr"
+    },
+    {
+        "id": 4508,
+        "type": "shoes",
+        "name": "Shoe 9",
+        "gender": "Woman",
+        "stock": 15,
+        "size": "39,40,41,44,45,46",
+        "img": "https://drive.google.com/uc?export=view&id=1TcHibfKbO3TLgIK6UfE_9KgirFOGiawq"
+    }
+]
