@@ -1,24 +1,40 @@
 package com.omerfarukasil.hw2.adapter
 
+import SizeCustomRecyclerViewAdapter
+import android.app.Dialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.model.GlideUrl
 import com.omerfarukasil.hw2.R
 import com.omerfarukasil.hw2.db.Clothes
 
+// For httpClientOk
+import okhttp3.OkHttpClient
+import java.io.InputStream
+import java.util.concurrent.TimeUnit
+import com.bumptech.glide.integration.okhttp3.OkHttpUrlLoader
+import com.omerfarukasil.hw2.databinding.ProductInfoLayoutBinding
+
+
 class ProductCustomRecyclerViewAdapter(
-    private val context: Context,
+    private val context: Context
 ) : RecyclerView.Adapter<ProductCustomRecyclerViewAdapter.ClothesViewHolder>() {
 
     // Interface
     interface ProductsAdapterInterface {
         fun displayProduct(clothes: Clothes)
         fun displayProducts(clothes: MutableList<Clothes>)
+    }
+
+    interface OnClothesClickListener{
+        fun onProductClick(clothes: Clothes, context: Context)
     }
 
     companion object {
@@ -56,7 +72,17 @@ class ProductCustomRecyclerViewAdapter(
             holder.itemView.setBackgroundResource(R.drawable.item_layout_default_background)
         }
 
-        // Bind product data to view
+        val okHttpClient = OkHttpClient.Builder()
+            .connectTimeout(30, TimeUnit.SECONDS) // Bağlantı zaman aşımı
+            .readTimeout(30, TimeUnit.SECONDS)    // Okuma zaman aşımı
+            .writeTimeout(30, TimeUnit.SECONDS)   // Yazma zaman aşımı
+            .build()
+        Glide.get(context).registry.replace(
+            GlideUrl::class.java,
+            InputStream::class.java,
+            OkHttpUrlLoader.Factory(okHttpClient)
+        )
+
         holder.clothesName.text = currentProduct.name
         val imgUrlAddress = currentProduct.img
         Glide.with(context)
@@ -64,7 +90,6 @@ class ProductCustomRecyclerViewAdapter(
             .fitCenter()
             .into(holder.clothesImg)
 
-        // Set click listener for selection and notify the interface
         holder.itemView.setOnClickListener {
             // Update selected position
             val previousPosition = selectedPosition
@@ -74,13 +99,52 @@ class ProductCustomRecyclerViewAdapter(
             notifyItemChanged(previousPosition) // Deselect previous
             notifyItemChanged(selectedPosition) // Select new
 
-            // Notify the interface about the selected product
-            adapterInterface.displayProduct(currentProduct)
+            showItemCustomDialog(currentProduct)
         }
     }
+
+    private fun showItemCustomDialog(clothes: Clothes) {
+        // Binding kullanarak layoutu inflate et
+        val dialogBinding = ProductInfoLayoutBinding.inflate(LayoutInflater.from(context))
+
+        // Dialog oluştur
+        val dialog = Dialog(context).apply {
+            setContentView(dialogBinding.root)
+        }
+
+        val sizeList: List<String> = clothes.size.split(",").map { it.trim() }
+
+        // Bedenler RecyclerView'ı başlat
+        val sizeAdapter = SizeCustomRecyclerViewAdapter(sizeList) // Assume sizes is List<String>
+        dialogBinding.productSizeRecyclerView.apply {
+            adapter = sizeAdapter
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        }
+
+        // Dialog içerisindeki görseller ve veriler
+        dialogBinding.productNameTxtView.text = clothes.name
+        dialogBinding.productStockView.text = "Stock: ${clothes.stock}"
+
+        // Glide ile ürün resmi
+        Glide.with(context)
+            .load(clothes.img)
+            .fitCenter()
+            .into(dialogBinding.productInfoImgView)
+
+        // Dialog kapatma butonu
+        dialogBinding.productInfoBackBtn.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
 
     inner class ClothesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val clothesName: TextView = itemView.findViewById(R.id.productNameTxtView) // Assuming "productNameTxtView" is correct ID for name
         val clothesImg: ImageView = itemView.findViewById(R.id.productImg) // Assuming "productImg" is correct ID for image
     }
 }
+
+
+

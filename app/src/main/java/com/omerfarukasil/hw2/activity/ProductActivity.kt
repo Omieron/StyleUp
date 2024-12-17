@@ -1,16 +1,20 @@
 package com.omerfarukasil.hw2.activity
 
+import android.app.Dialog
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.omerfarukasil.hw2.R
 import com.omerfarukasil.hw2.adapter.ProductCustomRecyclerViewAdapter
 import com.omerfarukasil.hw2.api.ApiClient
 import com.omerfarukasil.hw2.api.service.ClothesService
 import com.omerfarukasil.hw2.databinding.ActivityProductBinding
+import com.omerfarukasil.hw2.databinding.ProductInfoLayoutBinding
 import com.omerfarukasil.hw2.db.Clothes
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,6 +26,8 @@ class ProductActivity : AppCompatActivity(), ProductCustomRecyclerViewAdapter.Pr
     private var clothesList: List<Clothes> = emptyList()  // Change to List<Clothes>
     private lateinit var productService: ClothesService
     private lateinit var productAdapter: ProductCustomRecyclerViewAdapter
+    private lateinit var customDialog: Dialog
+    private lateinit var productInfoLayoutBinding : ProductInfoLayoutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,4 +93,26 @@ class ProductActivity : AppCompatActivity(), ProductCustomRecyclerViewAdapter.Pr
     override fun displayProducts(clothes: MutableList<Clothes>) {
         // Optional: Handle logic to display a list of clothes (if needed)
     }
+
+//    override fun onProductClick(clothes: Clothes, context: Context) {
+//
+//        productInfoLayoutBinding = ProductInfoLayoutBinding.inflate(layoutInflater)
+//        customDialog = Dialog(this@ProductActivity).apply {
+//            setContentView(productInfoLayoutBinding.root)
+//        }
+//
+//        productInfoLayoutBinding.productNameTxtView.text = clothes.name
+//        productInfoLayoutBinding.productStockView.text = "Stock: ${clothes.stock}"
+//        Glide.with(context)
+//            .load(clothes.img)
+//            .fitCenter()
+//            .into(productInfoLayoutBinding.productInfoImgView)
+//
+//        productInfoLayoutBinding.productInfoBackBtn.setOnClickListener{
+//            ProductCustomRecyclerViewAdapter.setSelectedPosition()
+//            customDialog.dismiss()
+//        }
+//
+//        customDialog.setOnDismissListener{}
+//    }
 }
