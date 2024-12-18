@@ -21,7 +21,7 @@ interface ShoppingCardDao {
     @Delete
     fun deleteItemInShoppingCard(shoppingCard: ShoppingCard): Int
 
-    @Query("SELECT * FROM ${ConstantsDB.SHOPPINGCARDTABLE} WHERE userId = :userId")
-    fun getUserAllShopping(userId : Int): List<ShoppingCard>
+    @Query("SELECT productId FROM ${ConstantsDB.SHOPPINGCARDTABLE} WHERE userId = :userId")
+    fun getUserAllShopping(userId : Int): List<Int>
 
 }

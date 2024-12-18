@@ -47,6 +47,7 @@ class ShopActivity : AppCompatActivity() {
             val intent = Intent(this@ShopActivity, ProductActivity::class.java)
             intent.putExtra("gender", userGender)
             intent.putExtra("itemType", "clothes")
+            intent.putExtra("userId", userId)
             startActivity(intent)
         }
 
@@ -55,6 +56,7 @@ class ShopActivity : AppCompatActivity() {
             val intent = Intent(this@ShopActivity, ProductActivity::class.java)
             intent.putExtra("gender", userGender)
             intent.putExtra("itemType", "pants") //clothes ise type = 2
+            intent.putExtra("userId", userId)
             startActivity(intent)
         }
 
@@ -63,6 +65,7 @@ class ShopActivity : AppCompatActivity() {
             val intent = Intent(this@ShopActivity, ProductActivity::class.java)
             intent.putExtra("gender", userGender)
             intent.putExtra("itemType", "hats") //clothes ise type = 3
+            intent.putExtra("userId", userId)
             startActivity(intent)
         }
 
@@ -71,6 +74,7 @@ class ShopActivity : AppCompatActivity() {
             val intent = Intent(this@ShopActivity, ProductActivity::class.java)
             intent.putExtra("gender", userGender)
             intent.putExtra("itemType", "shoes") //clothes ise type = 4
+            intent.putExtra("userId", userId)
             startActivity(intent)
         }
 

@@ -9,7 +9,7 @@ import com.omerfarukasil.hw2.db.dao.ShoppingCardDao
 import com.omerfarukasil.hw2.db.dao.UserDao
 import com.omerfarukasil.hw2.util.ConstantsDB
 
-@Database(entities = [User::class, ShoppingCard::class, Clothes::class], version = 3)
+@Database(entities = [User::class, ShoppingCard::class, Clothes::class], version = 4)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun UserDao(): UserDao
     abstract fun ClothesDao(): ClothesDao
@@ -29,7 +29,7 @@ abstract class AppDatabase : RoomDatabase(){
                 val instance = Room.databaseBuilder(context.applicationContext,
                     AppDatabase::class.java,
                     ConstantsDB.DATABASENAME)
-                    //.fallbackToDestructiveMigration()
+                    .fallbackToDestructiveMigration()
                     .allowMainThreadQueries()
                     .build()
                 INSTANCE = instance

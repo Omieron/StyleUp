@@ -8,18 +8,8 @@ import com.omerfarukasil.hw2.util.ConstantsDB
 import kotlinx.parcelize.Parcelize
 
 
-@Entity(
-    tableName = ConstantsDB.SHOPPINGCARDTABLE,
-    foreignKeys = [
-        ForeignKey(
-            entity = User::class, // Bağlanacağı tablo
-            parentColumns = ["id"], // User tablosundaki primary key
-            childColumns = ["userId"], // ShoppingCard'daki foreign key
-            onDelete = ForeignKey.CASCADE // Kullanıcı silinirse, bağlı ShoppingCard kayıtları da silinir
-        )
-    ]
-)
 @Parcelize
+@Entity(tableName = ConstantsDB.SHOPPINGCARDTABLE)
 class ShoppingCard (
     @PrimaryKey
     var userId : Int,

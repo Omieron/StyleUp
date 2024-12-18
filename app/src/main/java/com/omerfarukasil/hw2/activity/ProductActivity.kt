@@ -2,11 +2,14 @@ package com.omerfarukasil.hw2.activity
 
 import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.omerfarukasil.hw2.R
@@ -16,6 +19,7 @@ import com.omerfarukasil.hw2.api.service.ClothesService
 import com.omerfarukasil.hw2.databinding.ActivityProductBinding
 import com.omerfarukasil.hw2.databinding.ProductInfoLayoutBinding
 import com.omerfarukasil.hw2.db.Clothes
+import com.omerfarukasil.hw2.db.viewModal.UserViewModal
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,8 +30,7 @@ class ProductActivity : AppCompatActivity(), ProductCustomRecyclerViewAdapter.Pr
     private var clothesList: List<Clothes> = emptyList()  // Change to List<Clothes>
     private lateinit var productService: ClothesService
     private lateinit var productAdapter: ProductCustomRecyclerViewAdapter
-    private lateinit var customDialog: Dialog
-    private lateinit var productInfoLayoutBinding : ProductInfoLayoutBinding
+    private lateinit var userViewModal: UserViewModal
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,13 +38,16 @@ class ProductActivity : AppCompatActivity(), ProductCustomRecyclerViewAdapter.Pr
         binding = ActivityProductBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        userViewModal = ViewModelProvider(this).get(UserViewModal::class.java)
+
         // GET INTENT
         val gender = intent.getStringExtra("gender") ?: "Woman"
         val itemType = intent.getStringExtra("itemType") ?: "clothes"
+        val userId = intent.getIntExtra("userId", 0)
 
         // ADJUST RECYCLERVIEW ADAPTER
         binding.itemRecyclerView.layoutManager = LinearLayoutManager(this)
-        productAdapter = ProductCustomRecyclerViewAdapter(this)
+        productAdapter = ProductCustomRecyclerViewAdapter(this, userId, this)
         binding.itemRecyclerView.adapter = productAdapter
 
         // GET JSON PARAMs
@@ -63,6 +69,22 @@ class ProductActivity : AppCompatActivity(), ProductCustomRecyclerViewAdapter.Pr
                 }
             }
         })
+
+        binding.personIcon.setOnClickListener{
+            if(userId != 0){
+                val userObj = userViewModal.getUser(userId)
+                createUserInfoDialog(userObj.toString())
+            } else {
+                Toast.makeText(this@ProductActivity, "First login or register", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // Card Icon
+        binding.cardIcon.setOnClickListener{
+            val intent = Intent(this@ProductActivity, ShoppingCardActivity::class.java)
+            intent.putExtra("userId", userId)
+            startActivity(intent)
+        }
     }
 
     // Choose JSON request based on item type and gender
@@ -90,29 +112,17 @@ class ProductActivity : AppCompatActivity(), ProductCustomRecyclerViewAdapter.Pr
         Toast.makeText(this, "Selected product: ${clothes.name}", Toast.LENGTH_SHORT).show()
     }
 
-    override fun displayProducts(clothes: MutableList<Clothes>) {
-        // Optional: Handle logic to display a list of clothes (if needed)
+    private fun createUserInfoDialog(str : String){
+        val userInfoAlertDialog = AlertDialog.Builder(this@ProductActivity)
+
+        userInfoAlertDialog.setTitle("User Info")
+        userInfoAlertDialog.setIcon(R.drawable.baseline_person)
+        userInfoAlertDialog.setMessage(str)
+
+        userInfoAlertDialog.setPositiveButton("Back") { _, _ -> }
+
+        userInfoAlertDialog.create().show()
     }
 
-//    override fun onProductClick(clothes: Clothes, context: Context) {
-//
-//        productInfoLayoutBinding = ProductInfoLayoutBinding.inflate(layoutInflater)
-//        customDialog = Dialog(this@ProductActivity).apply {
-//            setContentView(productInfoLayoutBinding.root)
-//        }
-//
-//        productInfoLayoutBinding.productNameTxtView.text = clothes.name
-//        productInfoLayoutBinding.productStockView.text = "Stock: ${clothes.stock}"
-//        Glide.with(context)
-//            .load(clothes.img)
-//            .fitCenter()
-//            .into(productInfoLayoutBinding.productInfoImgView)
-//
-//        productInfoLayoutBinding.productInfoBackBtn.setOnClickListener{
-//            ProductCustomRecyclerViewAdapter.setSelectedPosition()
-//            customDialog.dismiss()
-//        }
-//
-//        customDialog.setOnDismissListener{}
-//    }
+
 }
